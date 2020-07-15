@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+    <form [formGroup]="form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Friend's Name</mat-label>
+            <input matInput placeholder="John" formControlName="name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Tickets Sold</mat-label>
+            <input matInput type="number" placeholder="20" formControlName="ticketsSold">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button 
+    [disabled]="!form.valid"
+    mat-raised-button color="primary" 
+    (click)="continue()">Add</button>
+</div>

@@ -1,0 +1,14 @@
+<div class="index-page">
+
+    <div *ngIf="showOverlay" class="overlay" (click)="openDialog($event)"></div>
+
+    <div class="header">
+        <h1>Bring A Friend Diagram</h1>
+        <button mat-raised-button color="primary" (click)="showOverlay=!showOverlay">Add a New Friend!</button>
+    </div>
+
+    <div *ngFor="let item of items">
+        <app-friend [friend]="item" (idEmitter)="getSelectedId($event)"></app-friend>
+    </div>
+
+</div>

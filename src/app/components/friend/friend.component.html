@@ -1,0 +1,19 @@
+<div *ngIf="friend" class="container">
+    <div class="example-box" cdkDragBoundary="body" cdkDrag (cdkDragEnded)="handleDrag($event)"
+        [style.left.px]="friend.initialX" [style.top.px]="friend.initialY - 114">
+        <span (click)="emitId()" class="material-icons">add</span>
+        <div class="friend-info">
+            <p><span>Name: </span>{{friend.name}}</p>
+            <p><span>Tickets Sold: </span>{{friend.ticketsSold}}</p>
+            <p><span>Total Sales: </span>{{friend.totalFromSales}}</p>
+            <p><span>Total Commission: </span>{{friend.totalFromCommission}}</p>
+            <p><span>Total Sales + Commission: </span>{{friend.totalFromSalesPlusComission}}</p>
+        </div>
+    </div>
+
+    <ng-container *ngIf="friend.children.length > 0">
+        <div *ngFor="let child of friend.children">
+            <app-line [x1]="friend.lineX" [y1]="friend.lineY" [x2]="child.lineX" [y2]="child.lineY"></app-line>
+        </div>
+    </ng-container>
+</div>
