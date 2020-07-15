@@ -22,7 +22,7 @@ export class LineComponent implements OnInit {
 
   @Input()
   set y1(cord: number) {
-    this._y1 = cord + 100;
+    this._y1 = cord + 75;
   }
   get y1() {
     return this._y1;
@@ -38,7 +38,7 @@ export class LineComponent implements OnInit {
 
   @Input()
   set y2(cord: number) {
-    this._y2 = cord + 100;
+    this._y2 = cord + 75;
   }
   get y2() {
     return this._y2;

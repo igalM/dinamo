@@ -42,9 +42,9 @@ export class FriendsService {
           },
           {
             initialX: 600,
-            initialY: 400,
+            initialY: 300,
             lineX: 600,
-            lineY: 400,
+            lineY: 300,
             id: 3,
             fatherId: 1,
             name: "Tal",
@@ -55,9 +55,9 @@ export class FriendsService {
             children: [
               {
                 initialX: 900,
-                initialY: 400,
+                initialY: 130,
                 lineX: 900,
-                lineY: 400,
+                lineY: 130,
                 id: 4,
                 fatherId: 3,
                 name: "Shalom",
@@ -69,9 +69,9 @@ export class FriendsService {
               },
               {
                 initialX: 900,
-                initialY: 650,
+                initialY: 300,
                 lineX: 900,
-                lineY: 650,
+                lineY: 300,
                 id: 5,
                 fatherId: 3,
                 name: "Adi",

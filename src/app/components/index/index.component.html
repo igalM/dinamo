@@ -1,6 +1,10 @@
 <div class="index-page">
 
-    <div *ngIf="showOverlay" class="overlay" (click)="openDialog($event)"></div>
+    <div *ngIf="showOverlay" class="overlay" (click)="openDialog($event)">
+        <span class="material-icons" (click)="showOverlay=!showOverlay">
+            cancel
+        </span>
+    </div>
 
     <div class="header">
         <h1>Bring A Friend Diagram</h1>

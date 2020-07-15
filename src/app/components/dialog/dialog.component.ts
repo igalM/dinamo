@@ -17,7 +17,7 @@ export class DialogComponent implements OnInit {
     private readonly fb: FormBuilder
   ) {
     this.form = this.fb.group({
-      id: Math.floor(Math.random() * (1000 - 1) + 1),
+      id: Math.floor(Math.random() * (10000 - 1) + 1),
       initialX: data.initialX,
       initialY: data.initialY,
       lineX: data.initialX,

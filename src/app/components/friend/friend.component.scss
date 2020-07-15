@@ -2,7 +2,7 @@
     height: 0;
     .example-box {
         width: 250px;
-        height: 200px;
+        height: 150px;
         border: solid 1px #ccc;
         color: rgba(0, 0, 0, 0.87);
         cursor: move;
@@ -22,13 +22,13 @@
         }
 
         p {
-            margin: 5px 0;
+            margin: 3px 0;
         }
         .material-icons {
             cursor: pointer;
             position: absolute;
             right: 10px;
-            top: 15px;
+            top: 10px;
             font-size: 30px;
         }
         .friend-info span {

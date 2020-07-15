@@ -5,4 +5,8 @@ svg {
     z-index: 100;
     pointer-events: none;
     top: 0;
+    line {
+        stroke-width: 1;
+        stroke: red;
+    }
 }
