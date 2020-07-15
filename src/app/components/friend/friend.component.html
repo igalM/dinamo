@@ -13,8 +13,12 @@
 
     <ng-container *ngIf="friend.children.length > 0">
         <div *ngFor="let child of friend.children">
-            <app-line [x1]="friend.lineX" [y1]="friend.lineY" [x2]="child.lineX" [y2]="child.lineY">
-                
+            <app-line 
+            [x1]="friend.lineX"
+            [y1]="friend.lineY"
+            [x2]="child.lineX" 
+            [y2]="child.lineY"
+            [color]="friend.color">
             </app-line>
         </div>
     </ng-container>

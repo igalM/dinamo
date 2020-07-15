@@ -12,6 +12,8 @@ export class LineComponent implements OnInit {
   private _x2: number = 0;
   private _y2: number = 0;
 
+  @Input() color: string = '';
+
   @Input()
   set x1(cord: number) {
     this._x1 = cord + 125;

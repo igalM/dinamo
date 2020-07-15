@@ -11,4 +11,5 @@ export class Friend {
     name: string;
     ticketsSold: number;
     children: Friend[];
+    color: string;
 }

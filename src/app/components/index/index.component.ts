@@ -47,8 +47,10 @@ export class IndexComponent implements OnInit {
           data.totalFromSales = data.ticketsSold * this.ticketPrice;
           if (this.selectedId) {
             data.fatherId = this.selectedId;
+            data.color = this.friendsService.makeRandomColor();
             this.friendsService.update(data, this.selectedId);
           } else {
+            data.color = this.friendsService.makeRandomColor();
             this.friendsService.add(data);
           }
           this.selectedId = null;

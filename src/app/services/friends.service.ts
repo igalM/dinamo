@@ -25,6 +25,7 @@ export class FriendsService {
         totalFromCommission: 1360,
         totalFromSales: 5000,
         totalFromSalesPlusComission: 6360,
+        color: 'red',
         children: [
           {
             initialX: 600,
@@ -38,6 +39,7 @@ export class FriendsService {
             totalFromCommission: 0,
             totalFromSales: 3000,
             totalFromSalesPlusComission: 3000,
+            color: 'purple',
             children: []
           },
           {
@@ -52,6 +54,7 @@ export class FriendsService {
             totalFromCommission: 1800,
             totalFromSales: 2000,
             totalFromSalesPlusComission: 3800,
+            color: 'blue',
             children: [
               {
                 initialX: 900,
@@ -65,6 +68,7 @@ export class FriendsService {
                 totalFromCommission: 0,
                 totalFromSales: 4000,
                 totalFromSalesPlusComission: 4000,
+                color: 'black',
                 children: []
               },
               {
@@ -79,6 +83,7 @@ export class FriendsService {
                 totalFromCommission: 0,
                 totalFromSales: 5000,
                 totalFromSalesPlusComission: 5000,
+                color: 'orange',
                 children: []
               }
             ]
@@ -122,5 +127,13 @@ export class FriendsService {
       }
     });
     return result;
+  }
+
+  makeRandomColor() {
+    var c = '';
+    while (c.length < 6) {
+      c += (Math.random()).toString(16).substr(-6).substr(-1)
+    }
+    return '#' + c;
   }
 }
