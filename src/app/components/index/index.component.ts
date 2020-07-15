@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { Friend } from 'src/app/models/Friend.model';
 import { FriendsService } from 'src/app/services/friends.service';
+import { FilesService } from 'src/app/services/files.service';
 
 @Component({
   selector: 'app-index',
@@ -18,7 +19,8 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private readonly dialog: MatDialog,
-    private readonly friendsService: FriendsService
+    private readonly friendsService: FriendsService,
+    private readonly filesService: FilesService
   ) {
 
     this.friendsService.init();
@@ -57,6 +59,10 @@ export class IndexComponent implements OnInit {
   getSelectedId(data: any) {
     this.selectedId = data.id;
     this.showOverlay = data.showOverlay;
+  }
+
+  export() {
+    this.filesService.exportToCSV(this.items);
   }
 
 }

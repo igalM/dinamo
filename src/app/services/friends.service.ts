@@ -109,8 +109,8 @@ export class FriendsService {
     this.flattenedItems[index] = father;
     if (father.fatherId) {
       const nextId = this.flattenedItems.findIndex(x => father.fatherId === x.id);
-      this.calculateCommission(father, nextId, moneyFromChild);
-    } else return;
+      return this.calculateCommission(father, nextId, moneyFromChild);
+    } else return this.calculateCommission(null, null, null);
   }
 
   flattenArray(array: Friend[]) {
