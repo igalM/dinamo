@@ -26,7 +26,7 @@ export class DialogComponent implements OnInit {
       totalFromCommission: 0,
       totalFromSalesPlusComission: 0,
       name: ['', Validators.required],
-      ticketsSold: ['', Validators.required],
+      ticketsSold: ['', [Validators.required, Validators.pattern('^\\d+$')]],
       children: [[]]
     });
   }
