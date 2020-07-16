@@ -42,7 +42,6 @@ export class IndexComponent implements OnInit {
 
     dialogRef.afterClosed()
       .subscribe((data: Friend) => {
-        this.showOverlay = false;
         if (data) {
           data.totalFromSales = data.ticketsSold * this.ticketPrice;
           if (this.selectedId) {
@@ -53,14 +52,19 @@ export class IndexComponent implements OnInit {
             data.color = this.friendsService.makeRandomColor();
             this.friendsService.add(data);
           }
-          this.selectedId = null;
         }
+        this.closeOverlay();
       });
   }
 
   getSelectedId(data: any) {
     this.selectedId = data.id;
     this.showOverlay = data.showOverlay;
+  }
+
+  closeOverlay() {
+    this.showOverlay = false;
+    this.selectedId = null;
   }
 
   export() {

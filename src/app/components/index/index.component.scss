@@ -7,6 +7,9 @@
         }
     }
     .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         animation: fadeIn ease-in 0.5s;
         position: fixed;
         top: 3px;
@@ -16,8 +19,13 @@
         border: 3px solid red;
         border-style: dashed;
         z-index: 999;
-        background-color: rgba(0, 0, 0, 0.32);
+        background-color: rgba(0, 0, 0, 0.62);
         cursor: pointer;
+        h1 {
+            width: 270px;
+            color: white;
+            font-weight: bold;
+        }
         .material-icons {
             position: absolute;
             right: 30px;

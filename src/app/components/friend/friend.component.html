@@ -1,5 +1,5 @@
 <div *ngIf="friend" class="container">
-    <div class="example-box" cdkDragBoundary="body" cdkDrag (cdkDragEnded)="handleDrag($event)"
+    <div class="example-box" cdkDragBoundary="body" cdkDrag (cdkDragMoved)="handleDrag($event)"
         [style.left.px]="friend.initialX" [style.top.px]="friend.initialY - 114">
         <span (click)="emitId()" class="material-icons">add</span>
         <div class="friend-info">

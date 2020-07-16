@@ -1,15 +1,16 @@
 <div class="index-page">
 
     <div *ngIf="showOverlay" class="overlay" (click)="openDialog($event)">
-        <span class="material-icons" (click)="showOverlay=!showOverlay">
+        <span class="material-icons" (click)="closeOverlay()">
             cancel
         </span>
+        <h1>Click somewhere to place a new friend</h1>
     </div>
 
     <div class="header">
         <h1>Bring A Friend Diagram</h1>
         <button mat-raised-button color="primary" (click)="export()">Export Diagram</button>
-        <button mat-raised-button color="primary" (click)="showOverlay=!showOverlay">Add a New Friend!</button>
+        <button mat-raised-button color="primary" (click)="showOverlay=!showOverlay">Add A New Friend!</button>
     </div>
 
     <div *ngFor="let item of items">
