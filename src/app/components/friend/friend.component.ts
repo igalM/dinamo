@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Friend } from 'src/app/models/Friend.model';
-import { CdkDragEnd, CdkDragMove } from '@angular/cdk/drag-drop';
+import { CdkDragMove } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-friend',
@@ -14,8 +14,8 @@ export class FriendComponent {
   constructor() { }
 
   handleDrag(e: CdkDragMove) {
-    let element = e.source.getRootElement();
-    let newPos = element.getBoundingClientRect();
+    const element = e.source.getRootElement();
+    const newPos = element.getBoundingClientRect();
     this.friend.lineX = newPos.x;
     this.friend.lineY = newPos.y;
   }
