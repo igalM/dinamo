@@ -119,21 +119,21 @@ export class FriendsService {
   }
 
   flattenArray(array: Friend[]) {
-    var result = [];
-    array.forEach((a: Friend) => {
-      result.push(a);
-      if (Array.isArray(a.children)) {
-        result = result.concat(this.flattenArray(a.children));
+    let result = [];
+    array.forEach((friend: Friend) => {
+      result.push(friend);
+      if (Array.isArray(friend.children)) {
+        result = result.concat(this.flattenArray(friend.children));
       }
     });
     return result;
   }
 
   makeRandomColor() {
-    var c = '';
-    while (c.length < 6) {
-      c += (Math.random()).toString(16).substr(-6).substr(-1)
+    let color = '';
+    while (color.length < 6) {
+      color += (Math.random()).toString(16).substr(-6).substr(-1)
     }
-    return '#' + c;
+    return '#' + color;
   }
 }

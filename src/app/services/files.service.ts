@@ -11,21 +11,21 @@ export class FilesService {
 
   exportToCSV(data: Friend[]) {
 
-    const transformedData = data.map(x => {
+    const transformedData = data.map((friend: Friend) => {
       const children = [];
-      if (x.children.length > 0) {
-        for (let i = 0; i < x.children.length; i++) {
-          children.push(x.children[i].name);
+      if (friend.children.length > 0) {
+        for (let i = 0; i < friend.children.length; i++) {
+          children.push(friend.children[i].name);
         }
       } else {
         children.push('None');
       }
       return {
-        name: x.name,
-        ticketsSold: x.ticketsSold,
-        totalSales: x.totalFromSales,
-        totalFromCommission: x.totalFromCommission,
-        totalFromSalesPlusCommission: x.totalFromSalesPlusComission,
+        name: friend.name,
+        ticketsSold: friend.ticketsSold,
+        totalSales: friend.totalFromSales,
+        totalFromCommission: friend.totalFromCommission,
+        totalFromSalesPlusCommission: friend.totalFromSalesPlusComission,
         children: children.join(', ')
       };
     });
